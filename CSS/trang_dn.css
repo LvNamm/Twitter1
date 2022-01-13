@@ -1,0 +1,137 @@
+.main {
+  margin: 0px;
+  padding: 0px;
+}
+
+.main__dn {
+  height: 740px;
+}
+
+@media only screen and (max-width: 999px) {
+  .main__dn {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .maindn__left {
+    order: 2;
+  }
+  .img_background {
+    height: 45vh !important;
+  }
+  .icon_chim {
+    font-size: 30vh !important;
+  }
+  .main__right {
+    order: 1;
+    margin-left: 200px !important;
+  }
+  .footer {
+    order: 3;
+  }
+}
+
+.img_background {
+  margin-left: 0px;
+  padding: 0px;
+  height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-image: url("https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+.img_background i {
+  width: 341px;
+  height: 277px;
+  font-size: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.col,
+.main__left__icon {
+  margin-left: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main__right {
+  padding: 36px;
+}
+.title1 {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+.title1__1 {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.title2 {
+  margin-bottom: 32px;
+}
+
+.title2__2 {
+  font-size: 31px;
+  font-weight: 700;
+}
+
+.btn {
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+
+  width: 300px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.bi {
+  font-size: 18px;
+}
+.guide {
+  font-size: 11px;
+  font-weight: 400px;
+  margin-bottom: 20px;
+}
+
+.sign_in {
+  margin-top: 40px;
+}
+
+.question {
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.footer {
+  padding-top: 10px;
+  padding-left: 16px;
+  padding-bottom: 10px;
+  padding-right: 16px;
+
+  font-size: 13px;
+}
+
+.guide {
+  width: 300px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.footer .footer__element a,
+.footer__son {
+  margin-left: 16px;
+  white-space: nowrap;
+  color: #000;
+}
