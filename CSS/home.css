@@ -1,236 +1,234 @@
-p{
-    margin: 0;
-    padding-right: 10px;
+p {
+  margin: 0;
+  padding-right: 10px;
 }
 body .content {
-    width : 600px;
-    height: fit-content;
-    border: 1px solid rgb(212, 212, 212);;
+  width: 600px;
+  height: fit-content;
+  border: 1px solid rgb(212, 212, 212);
 }
 
 body .content__header {
-    width           : 100%;
-    display         : flex;
-    justify-content : space-between;
-    padding         : 10px 10px 0 10px;
-    position        : sticky;
-    top             : 0;
-    box-sizing      : border-box;
-    background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 0 10px;
+  position: sticky;
+  top: 0;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 body .content__header h3 {
-    font-size  : 22px;
-    margin     : 0;
-    cursor     : pointer;
-    text-align : center;
-    align-items: center;
-    margin     : auto 0 auto 0;
+  font-size: 22px;
+  margin: 0;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  margin: auto 0 auto 0;
 }
 
 body .content__header a {
-    width     : 40px;
-    height    : 40px;
-    padding   : 4px 0 0 9px;
-    box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  padding: 4px 0 0 9px;
+  box-sizing: border-box;
 }
 
 body .content__header a:hover {
-    border          : 1px;
-    border-radius   : 45px;
-    background-color: #dbd8d8;
+  border: 1px;
+  border-radius: 45px;
+  background-color: #dbd8d8;
 }
 
-body .content__writestatus{
-    display: flex;
-    border-bottom: solid 1px rgb(212, 212, 212);
+body .content__writestatus {
+  display: flex;
+  border-bottom: solid 1px rgb(212, 212, 212);
 }
 
-body .content__writestatus .col-11{
-    padding-right:20px ;
-    padding-left: 30px;
+body .content__writestatus .col-11 {
+  padding-right: 20px;
+  padding-left: 30px;
 }
-body .content__writestatus .col-11 input{
-    width: 100%;
-    padding: 0 15px 0 0;
-    border: none;
-    box-sizing: border-box;
-    margin-top: 15px;
-    height: 40px;
-}
-
-body .content__writestatus .col-11 input:focus{
-    outline: none;
-}
-body .content__writestatus .col-11 a{
-    height: 30px;
-    align-items: center;
-    width: fit-content;
-}
-body .content__writestatus .col-11 a:hover{
-    background-color: #abd7f5;
-    border: 1px;
-    border-radius: 45px;
+body .content__writestatus .col-11 input {
+  width: 100%;
+  padding: 0 15px 0 0;
+  border: none;
+  box-sizing: border-box;
+  margin-top: 15px;
+  height: 40px;
 }
 
-
-body .content__writestatus .col-11 .media{
-    padding: 10px 0 10px 0;
-    display: flex;
-    justify-content:space-between;
-    border-top: solid 1px rgb(212, 212, 212);
+body .content__writestatus .col-11 input:focus {
+  outline: none;
+}
+body .content__writestatus .col-11 a {
+  height: 30px;
+  align-items: center;
+  width: fit-content;
+}
+body .content__writestatus .col-11 a:hover {
+  background-color: #abd7f5;
+  border: 1px;
+  border-radius: 45px;
 }
 
-body .content__writestatus .col-11 .media div a{
-    width: 40px !important;
-    height: 40px !important;
-}
-body .content__writestatus .col-11 .media div a:hover{
-
-    background-color: rgb(120, 250, 255);
-    border: 1px;
-    border-radius: 45px;
-    box-sizing: border-box;
-}
-body .content__writestatus .col-11 .media button{
-    border: 1px none;
-    background-color: rgb(120, 250, 255);
-    border-radius: 45px;
-    width: 100px;
-}
-body .content__whotofollow .col-11 .media div a span{
-    padding: 8px 0 0 8px;
+body .content__writestatus .col-11 .media {
+  padding: 10px 0 10px 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: solid 1px rgb(212, 212, 212);
 }
 
-
-body .content__whotofollow{
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgb(212, 212, 212);
+body .content__writestatus .col-11 .media div a {
+  width: 40px !important;
+  height: 40px !important;
 }
-body .content__whotofollow .header_whotofollow{
-    display: flex;
-    justify-content: space-between;
+body .content__writestatus .col-11 .media div a:hover {
+  background-color: rgb(120, 250, 255);
+  border: 1px;
+  border-radius: 45px;
+  box-sizing: border-box;
 }
-body .content__whotofollow .header_whotofollow a{
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body .content__writestatus .col-11 .media button {
+  border: 1px none;
+  background-color: rgb(120, 250, 255);
+  border-radius: 45px;
+  width: 100px;
 }
-body .content__whotofollow .header_whotofollow a:hover{
-    border: 1px;
-    border-radius: 45px;
-    background-color: rgb(219, 255, 252);
+body .content__whotofollow .col-11 .media div a span {
+  padding: 8px 0 0 8px;
 }
 
-body .content__whotofollow .user:hover{
-    background-color: rgb(185, 185, 185);
-    cursor: pointer;
+body .content__whotofollow {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+body .content__whotofollow .header_whotofollow {
+  display: flex;
+  justify-content: space-between;
+}
+body .content__whotofollow .header_whotofollow a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .content__whotofollow .header_whotofollow a:hover {
+  border: 1px;
+  border-radius: 45px;
+  background-color: rgb(219, 255, 252);
 }
 
-body .content__whotofollow .col-11{
-    padding-right:20px ;
-    padding-left: 30px;
+body .content__whotofollow .user:hover {
+  background-color: rgb(185, 185, 185);
+  cursor: pointer;
 }
-body .content__whotofollow .col-11 div button{
-    border: 1px none;
-    border-radius: 45px;
-    height: 35px;
-    padding: 0 20px 0 20px;
-    color: rgb(255, 255, 255);
-    background-color: black;
+
+body .content__whotofollow .col-11 {
+  padding-right: 20px;
+  padding-left: 30px;
 }
-body .content__whotofollow .col-11 div button:hover{
-    background-color: rgb(19, 19, 19);
+body .content__whotofollow .col-11 div button {
+  border: 1px none;
+  border-radius: 45px;
+  height: 35px;
+  padding: 0 20px 0 20px;
+  color: rgb(255, 255, 255);
+  background-color: black;
 }
-body .content__whotofollow .col-11 div .mail{
-    color: rgb(131, 131, 131);
+body .content__whotofollow .col-11 div button:hover {
+  background-color: rgb(19, 19, 19);
 }
-body .content__whotofollow .col-11 div a{
-    color: black;
-    font-weight: 700;
+body .content__whotofollow .col-11 div .mail {
+  color: rgb(131, 131, 131);
 }
-body .content__whotofollow .col-11 div a:hover{
-    text-decoration: underline;
+body .content__whotofollow .col-11 div a {
+  color: black;
+  font-weight: 700;
+}
+body .content__whotofollow .col-11 div a:hover {
+  text-decoration: underline;
 }
 /**/
-.icontweet{
-    display: flex;
+.icontweet {
+  display: flex;
 }
-.opition_tweet{
-    margin-left: 10px;
+.opition_tweet {
+  margin-left: 10px;
 }
-.iconn{
-    text-align: center;
-    width: 30px;
-    height: 30px;
+.iconn {
+  text-align: center;
+  width: 30px;
+  height: 30px;
 }
-.icomment:hover,.ishare:hover{
-    border: 1px;
-    border-radius: 45px;
-    background-color: rgb(148, 207, 255);
-    color: rgb(0, 89, 255);
+.icomment:hover,
+.ishare:hover {
+  border: 1px;
+  border-radius: 45px;
+  background-color: rgb(148, 207, 255);
+  color: rgb(0, 89, 255);
 }
-.iretweet:hover{
-    border: 1px;
-    border-radius: 45px;
-    background-color: rgb(131, 255, 183);
-    color: rgb(0, 255, 98);
+.iretweet:hover {
+  border: 1px;
+  border-radius: 45px;
+  background-color: rgb(131, 255, 183);
+  color: rgb(0, 255, 98);
 }
-.ilike:hover{
-    border: 1px;
-    border-radius: 45px;
-    background-color: #ff94b8;
-    color: rgb(255, 46, 126);
+.ilike:hover {
+  border: 1px;
+  border-radius: 45px;
+  background-color: #ff94b8;
+  color: rgb(255, 46, 126);
 }
 
 /**/
 .right_slide_bar {
-    width : 350px;
+  width: 350px;
 }
-.right_slide_bar__child{
-    margin-top: 50px;
-    position: relative;
+.right_slide_bar__child {
+  margin-top: 50px;
+  position: relative;
 }
-.Trend_child{
-    position: relative;
-    margin-top: 0;
+.Trend_child {
+  position: relative;
+  margin-top: 0;
 }
 .right_slide_bar__dow {
-    position: relative;
-    margin-top: 0;
+  position: relative;
+  margin-top: 0;
 }
-.right_slide_bar__search{
-    z-index: 2;
-    height: 45px;
-    position: fixed;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:  rgb(255, 255, 255);
+.right_slide_bar__search {
+  z-index: 2;
+  height: 45px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
 }
-.right_slide_bar__search div{
-    display: flex;
-    width: 350px;
-    border: 1px;
-    border-radius: 45px;
-    height: 40px;
-    align-items: center;
-    background-color: rgb(226, 226, 226);
+.right_slide_bar__search div {
+  display: flex;
+  width: 350px;
+  border: 1px;
+  border-radius: 45px;
+  height: 40px;
+  align-items: center;
+  background-color: rgb(226, 226, 226);
 }
-.right_slide_bar__search div span{
-    margin-left: 15px;
-    padding-top: 3px;
+.right_slide_bar__search div span {
+  margin-left: 15px;
+  padding-top: 3px;
 }
-.right_slide_bar__search div input{
-    border: none;
-    width:280px;
-    height: 30px;
-    margin-left: 10px;
-    background-color: rgb(226, 226, 226);
+.right_slide_bar__search div input {
+  border: none;
+  width: 280px;
+  height: 30px;
+  margin-left: 10px;
+  background-color: rgb(226, 226, 226);
 }
-.right_slide_bar__search div input:focus{
-outline: none;
+.right_slide_bar__search div input:focus {
+  outline: none;
 }
