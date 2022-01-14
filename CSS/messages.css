@@ -1,0 +1,158 @@
+.list_mes{
+    width: 450px;
+    height: 100vh;
+    border-right:1px solid ;
+}
+.list_mes .header{
+    width: 450px;
+    padding: 5px 10px 0 10px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list_mes .header a{
+    width: 30px;
+    height: 30px;
+    color: black;
+    border: 1px;
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list_mes .header a:hover{
+    background-color: rgb(201, 201, 201);
+}
+.search div{
+    display: flex;
+    border: 1px;
+    border-radius: 45px;
+    height: 40px;
+    align-items: center;
+    border:1px solid rgb(226, 226, 226);
+}
+.search div span{
+    margin-left: 15px;
+    padding-top: 3px;
+}
+.search div input{
+    border: none;
+    width:280px;
+    height: 30px;
+    margin-left: 10px;
+}
+.search div input:focus{
+outline: none;
+}
+
+.list_mes__user .user{
+    display: flex;
+    padding-bottom:  15px;
+    padding-top: 10px;
+}
+.list_mes__user .user:hover{
+background-color: rgb(212, 212, 212);
+cursor: pointer;
+}
+.list_mes__user .user div{
+    margin-left: 20px;
+}
+.list_mes__user .user div p,h6{
+    margin: 0;
+    padding: 0;
+}
+.list_mes__user img{
+    width: 40px;
+    height: 40px;
+    border: 1px;
+    border-radius: 45px;
+}
+
+.mes{
+    width: 500px;
+    height: 100vh;
+    border-right: 1px solid black;
+}
+.mes header{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    width: 499px;
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(202, 202, 202);
+}
+.mes header h4,p{
+    margin: 0;
+    
+}
+.mes header a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 30px;
+    height: 30px;
+}
+.mes header a:hover{
+    background-color: rgb(192, 192, 192);
+    border: 1px;
+    border-radius: 45px;
+}
+.mes__box_chat{
+    margin-top: 100px;
+    overflow-y: scroll;
+}
+.mes__box_chat__text img{
+    width: 30px;
+    height: 30px;
+    border: 1px;
+    border-radius: 45px;
+}
+.mes__box_chat__text{
+    margin-bottom: 5px;
+    display: flex;
+    width: 100%;
+}
+.you div{
+    margin-left: 10px;
+    margin-right: 150px;
+    border: 1px;
+    background-color: rgb(173, 173, 173);
+    border-radius: 0 20px 20px 20px;
+}
+.me div{
+    margin-right: 10px;
+    margin-left: 150px;
+    border: 1px;
+    background-color: rgb(0, 174, 255);
+    border-radius: 20px 20px 0 20px;
+}
+.mes__box_chat__text div p{
+    padding: 5px;
+}
+.you{
+    justify-content: flex-start;
+}
+.me{
+    justify-content: flex-end;
+}
+.mes__input_text{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    margin: 0 10px 0 10px;
+}
+.mes__input_text input{
+    width:390px;
+    border: 1px solid rgb(47, 224, 255);
+    border-radius: 45px;
+    height: 30px;
+    padding: 0 20px 0 20px;
+}
+.mes__input_text input:focus{
+    outline: none;
+}
