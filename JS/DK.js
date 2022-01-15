@@ -6,7 +6,7 @@ $(document).ready(function () {
     { check: false, idip: "#inputFullName", idwn: '#warningFullName' },
     { check: false, idip: "#inputPassword", idwn: '#warningPassword' },
     { check: false, idip: "#inputConfirmPassword", idwn: '#warningRePassword' }]
-    b = [/^[a-z0-9_]{6,16}$/i, /^[a-zA-Z\săâưôơéèẻẹếềểệễýỵỳỷùúụủừứựửíìịỉóòọỏáàạảấầẩậắằằặđ]{2,}$/i, /^[a-z0-9_-]{6,18}$/i, undefined]
+    b = [/^[a-z0-9_]{6,16}$/i, /^[a-zA-Z\săâưôơéèẻẹếềểệễýỵỳỷùúụủũừứựửíìịỉóòọỏáàạảấầẩậắằằặđ]{2,}$/i, /^[a-z0-9_-]{6,18}$/i, undefined]
     for (let i = 0; i < a.length; i++) {
         $(a[i].idip).keydown(function () {
             $(a[i].idwn).hide()
@@ -63,7 +63,8 @@ $(document).ready(function () {
                     fullname:$(a[1].idip).val(),
                     bio:"Xin chào mọi người lại là Nam và Phong đây",
                     pass:$(a[2].idip).val(),
-                    img:'../IMG/avadefault.png'
+                    img:'../IMG/avadefault.png',
+                    followed:[]
                 })
                 localStorage.setItem('listUser',JSON.stringify(listUser))
                 alert("Đăng ký thành công. Bạn sẽ được đưa về trang đăng nhập")
