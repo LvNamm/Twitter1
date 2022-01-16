@@ -1,0 +1,52 @@
+ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the list items */
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+  ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #ddd;
+  }
+  ul li div{
+      display: flex;
+  }
+  ul li div h6{
+      margin: 9px 15px 0 15px;
+  }
+  ul li img{
+      width: 40px;
+      height: 40px;
+      border: 1px;
+      border-radius: 45px;
+  }
+  .write_comment{
+      justify-content: space-between;
+      align-items: center;
+      margin: 5px 10px 10px 10px;
+  }
+.write_comment input{
+    width: 80%;
+    height: 30px;
+}

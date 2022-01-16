@@ -50,6 +50,8 @@ $(document).ready(function () {
             let username = $(a[0].idip).val()
             check = true
             let listUser = JSON.parse(localStorage.getItem('listUser'))
+            if(listUser == undefined)
+                listUser =[]
             for(let i =0;i<listUser.length;i++){
                 if(username == listUser[i].username){
                     $("#warningUserName1").show()
