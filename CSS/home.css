@@ -209,7 +209,7 @@ body .content__whotofollow .col-11 div a:hover {
   justify-content: center;
   background-color: rgb(255, 255, 255);
 }
-.right_slide_bar__search div {
+.search_user{
   display: flex;
   width: 350px;
   border: 1px;
@@ -218,11 +218,11 @@ body .content__whotofollow .col-11 div a:hover {
   align-items: center;
   background-color: rgb(226, 226, 226);
 }
-.right_slide_bar__search div span {
+.search_user span {
   margin-left: 15px;
   padding-top: 3px;
 }
-.right_slide_bar__search div input {
+.search_user input {
   border: none;
   width: 280px;
   height: 30px;
@@ -232,7 +232,17 @@ body .content__whotofollow .col-11 div a:hover {
 .right_slide_bar__search div input:focus {
   outline: none;
 }
-#test{
+test{
   width: 200px;
   height: auto;
+}
+
+#search_user{
+  margin-top:10px;
+  width: 250px;
+  height: 35px;
+}
+#search_user input{
+  width: 150px;
+  height: 30px;
 }
