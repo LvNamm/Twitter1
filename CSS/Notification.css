@@ -1,0 +1,210 @@
+a {
+  text-decoration: none;
+}
+/* viền xung quanh */
+.vien {
+  border: 1px solid #e9e6e9;
+}
+body .content {
+  width: 600px;
+  height: 260px;
+}
+/* class này đển khi cho chuộn vào nó gạch chân phía dưới */
+.gach_chan--hover:hover {
+  text-decoration: underline;
+}
+.so_the_a {
+  font-weight: 700;
+  color: rgb(15, 20, 25);
+  font-size: 15px;
+}
+.chu_the_a {
+  color: rgb(83, 100, 113);
+  font-weight: 400;
+  font-size: 15px;
+}
+/* phần đầu */
+.content__navbar {
+  border: 1px solid #e9e6e9;
+  width: 600px;
+  height: 108px;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.ghim1 {
+  width: 600px;
+  height: 54px;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ghim2 {
+  margin-top: 54px;
+  width: 600px;
+  height: 54px;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.ghim2 > .row > .col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ghim2 > .row > .col > div > a > span {
+  font-weight: 700;
+  font-size: 15px;
+  color: rgb(15, 20, 25);
+}
+
+.row {
+  height: 100%;
+}
+.ghim2 > .row :hover {
+  background-color: rgba(15, 20, 25, 0.1);
+}
+/* phần thân */
+.phan_than {
+  margin-top: 108px;
+}
+.bai_dang {
+  padding: 12px 16px 12px 16px;
+}
+
+/*  */
+.title_Notifications {
+  font-weight: 700;
+  font-size: 20px;
+  color: rgb(15, 20, 25);
+}
+
+.bi-three-dots,
+.nut_bam {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bi-three-dots:hover {
+  border: 1px;
+  border-radius: 45px;
+  color: rgb(29, 155, 240);
+  background-color: rgba(29, 155, 240, 0.1);
+}
+.nut_bam:hover {
+  border: 1px;
+  border-radius: 45px;
+  background-color: rgb(214, 214, 214);
+}
+.btn_follow {
+  border: 1px none;
+  border-radius: 45px;
+  height: 35px;
+  padding: 0 20px 0 20px;
+  color: rgb(255, 255, 255);
+  background-color: black;
+}
+.btn_follow:hover {
+  background-color: rgb(19, 19, 19);
+}
+/* */
+
+/* <!--Right slidebar--> */
+/*  */
+.Right_Show_more {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.Right_Show_more:hover {
+  background-color: rgb(223, 223, 223);
+}
+/*  */
+
+.right__child > h2 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.anh_avata {
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.right_slide_bar {
+  margin-top: 14px;
+  margin-left: 35px;
+  width: 350px;
+  height: 100%;
+}
+.right_slide_bar__child {
+  border-top-right-radius: 8%;
+  border-top-left-radius: 8%;
+  /* border-bottom-left-radius: 8%;
+      border-bottom-right-radius: 8%; */
+  position: fixed;
+  width: 350px;
+  height: 285px;
+  background-color: #f6f6f6;
+}
+.right_slide_bar-container {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.Content_right__child1 {
+  color: rgb(15, 20, 25);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.Content_right__child2 {
+  color: rgb(83, 100, 113);
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.btn-dark {
+  border-top-right-radius: 30%;
+  border-top-left-radius: 30%;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+}
+
+.Right_Show_more {
+  position: fixed;
+  margin-top: 285px;
+  border-bottom-left-radius: 8%;
+  border-bottom-right-radius: 8%;
+  background-color: #f6f6f6;
+  width: 350px;
+}
+
+.right_slide_bar-container:hover {
+  background-color: rgb(223, 223, 223);
+}
+
+.right_slide_bar__dow {
+  position: fixed;
+  margin-top: 360px;
+  width: 350px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.right_slide_bar__dow > a > span {
+  padding-right: 12px;
+  color: rgb(83, 100, 113);
+  font-size: 13px;
+}
