@@ -1,19 +1,102 @@
-let list_tweet = JSON.parse(localStorage.getItem('listtweet'))
-let list_User= JSON.parse(localStorage.getItem('listUser'))
-if (list_tweet==undefined)
-    list_tweet=[1]
+$('.lop_phu').click(function () {
+    $('.lop_phu').hide()
+    $('.edit_profile').hide()
+})
 let user = JSON.parse(localStorage.getItem('user'))
-let img_avatar = document.querySelectorAll(".avatar")
-for(let i=0;i<img_avatar.length;i++){
-    img_avatar[i].src = user.img
+let list_user = JSON.parse(localStorage.getItem('listUser'))
+console.log(user)
+$('.user_name').text(user.fullname)
+$('.left-slide-bar__profile__img').attr('src', user.img)
+$('.full_name > span').text(user.fullname)
+$('.phan_than__avata').attr('src', user.img)
+$('.email_name').text(user.username)
+$('.nick_name > span').text(user.username)
+$('.bio').text(user.bio)
+let following = user.followed.length
+let follower = 0
+for (let i = 0; i < list_user.length; i++) {
+    for (let j = 0; j < list_user[i].followed.length; j++) {
+        if (list_user[i].followed[j] == user.username)
+            follower = follower + 1
+    }
 }
-$('.user_name').first().text(user.fullname)
-$('.email_name').first().text(user.username)
+$('.so_the_a:eq(0)').text(following)
+$('.so_the_a:eq(1)').text(follower)
+console.log(follower)
 
+/* Sự kiện khi nhấn edit profile*/
+$('.edit-prf').click(function () {
+    console.log('ok')
+    $('.lop_phu').show()
+    $('.edit_profile').show()
+    $('.inputname').val(user.fullname)
+})
 
-let check_img = false
+/*Sự kiện khi thay đổi tên*/
+$('.btnchagename').click(function () {
+    let fullname = $('.inputname').val()
+    if (/^[a-zA-Z\săâưôơéèẻẹếềểệễýỵỳỷùúụủũừứựửíìịỉóòọỏáàạảấầẩậắằằặđ]{2,}$/i.test(fullname)) {
+        for (let i = 0; i < list_user.length; i++) {
+            if(list_user[i].username==user.username){
+                list_user[i].fullname = fullname
+                console.log(list_user[i])
+                localStorage.setItem('listUser',JSON.stringify(list_user))
+                break
+            }
+        }
+        let listtweet = JSON.parse(localStorage.getItem('listtweet'))
+        for(let i = 1;i<listtweet.length;i++){
+            if(listtweet[i].user.username==user.username){
+                listtweet[i].user.fullname = fullname
+                console.log(listtweet[i].user)
+            }
+            for(let h=0;h<listtweet[i].comment.length;h++){
+                if(listtweet[i].comment[h].user.username==user.username){
+                    listtweet[i].comment[h].user.fullname = fullname
+                }
+            }
+        }
+        user.fullname = fullname
+        console.log(user)
+        localStorage.setItem('user',JSON.stringify(user))
+        localStorage.setItem('listtweet',JSON.stringify(listtweet))
+        alert('Chỉnh sửa thành công')
+    }
+    else{
+        alert('Tên không phù hợp')
+    }
+})
+
+/* Sự kiện đổi ảnh đại diện*/
+$('.btnchangeavata').click(function(){
+    if(img_url==undefined)
+        alert('Bạn chưa chọn ảnh')
+    else{
+        for (let i = 0; i < list_user.length; i++) {
+            if(list_user[i].username==user.username){
+                list_user[i].img = img_url
+                localStorage.setItem('listUser',JSON.stringify(list_user))
+                break
+            }
+        }
+        let listtweet = JSON.parse(localStorage.getItem('listtweet'))
+        for(let i = 1;i<listtweet.length;i++){
+            if(listtweet[i].user.username==user.username){
+                listtweet[i].user.img = img_url
+            }
+            for(let h=0;h<listtweet[i].comment.length;h++){
+                if(listtweet[i].comment[h].user.username==user.username){
+                    listtweet[i].comment[h].user.img = img_url
+                }
+            }
+        }
+        user.img = img_url
+        localStorage.setItem('listtweet',JSON.stringify(listtweet))
+        localStorage.setItem('user',JSON.stringify(user))
+        alert("Thay đổi ảnh thành công")
+    }
+})
 let img_url = undefined
-/*Lấy đường dẫn ảnh*/
 $('#file').change((e)=>{
     check = true
     let file = e.target.files
@@ -25,42 +108,45 @@ $('#file').change((e)=>{
 
 })
 
-/*Đăng tweet*/
-$('#btn_tweet').click(function(){
-    let text = $('#input_text').val()
-    console.log($('#input_text').val())
-    if(text.trim()=='' && check_img==false){
-        alert('Nothing to show')
+/*Đổi mk*/
+$('.btnchangepass').click(function(){
+    let oldpass = $('#oldpass').val()
+    if(oldpass==user.pass){
+        let newpass = $('#newpass').val()
+        if( /^[a-z0-9_-]{6,18}$/i.test(newpass)){
+            let renewpass = $('#renewpass').val()
+            if(renewpass == newpass){
+                for (let i = 0; i < list_user.length; i++) {
+                    if(list_user[i].username==user.username){
+                        list_user[i].pass = newpass
+                        localStorage.setItem('listUser',JSON.stringify(list_user))
+                        break
+                    }
+                }
+                alert('Thay đổi mật khẩu thành công')
+            }
+            else{
+                alert('Dữ liệu nhập phù hợp hãy kiểm tra lại')
+            }
+        }
+        else{
+            alert('Dữ liệu nhập phù hợp hãy kiểm tra lại')
+        }
     }
     else{
-        let today = new Date()
-        let tweet = { id:list_tweet[0],
-                      user: user,
-                      text:$('#input_text').val(),
-                      url:img_url,
-                      date:today,
-                      like:[],
-                      comment:[],}
-        list_tweet.push(tweet)
-        list_tweet[0] = list_tweet[0]+1
-        $('#input_text').val('')
-        img_url=undefined
-        check_img=false
-        localStorage.setItem('listtweet',JSON.stringify(list_tweet))
-        console.log(list_tweet)
-        show()
+        alert('Dữ liệu nhập phù hợp hãy kiểm tra lại')
     }
 })
 
-// show tweet
+
 show()
 function show(){
-    console.log(list_tweet)
+    let list_tweet = JSON.parse(localStorage.getItem('listtweet'))
     let text = ``
     for(let i=list_tweet.length-1;i>0;i--){
         let check_user = false
         for(let j=0;j<user.followed.length;j++){
-            if(list_tweet[i].user.username == user.followed[j]){
+            if(list_tweet[i].user.username == user.username){
                 check_user = true
                 console.log('ok')
                 break
@@ -233,6 +319,7 @@ function show(){
     })
 }
 
+
 /* Hiện thị những người chưa follow bên trái slide bar*/
 display_usernotfollow('')
 function display_usernotfollow(string){
@@ -287,20 +374,3 @@ function display_usernotfollow(string){
         show()
     })
 }
-
-let a = `<div class="right_slide_bar-container">
-<div class="row">
-    <div class="col-2"><img class="anh_avata"
-            src="https://pbs.twimg.com/profile_images/1415603997185032192/uvWYpwSB_normal.jpg" alt="">
-    </div>
-    <div class="col-10" style="display: flex; justify-content: space-between;">
-        <div class="Content_right"><a href="#">
-                <div class="Content_right__child1 nick_name"><span>Capital.com Việt Nam</span></div>
-                <div class="Content_right__child2"><span>@CapitalcomViet</span></div>
-            </a></div>
-        <div><button type="button" class="btn btn-dark"><span style="width: 43px;
-            height: 30px; padding-top: 0;">Follow</span></button></div>
-    </div>
-</div>
-</div>`
-
