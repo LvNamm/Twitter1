@@ -1,0 +1,341 @@
+a {
+  text-decoration: none;
+}
+/* viền xung quanh */
+.vien {
+  border: 1px solid #e9e6e9;
+}
+body .content {
+  width: 600px;
+  height: 260px;
+}
+/* class này đển khi cho chuộn vào nó gạch chân phía dưới */
+.gach_chan--hover:hover {
+  text-decoration: underline;
+}
+.so_the_a {
+  font-weight: 700;
+  color: rgb(15, 20, 25);
+  font-size: 15px;
+}
+.chu_the_a {
+  color: rgb(83, 100, 113);
+  font-weight: 400;
+  font-size: 15px;
+}
+.content__navbar {
+  border: 1px solid rgb(207, 217, 222);
+  width: 600px;
+  height: 54px;
+  display: flex;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 99999;
+}
+/* phần thân */
+
+.phan_than {
+  margin-top: 55px;
+}
+
+.phan_than__avata {
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  height: 133.5px;
+  width: 133.5px;
+  margin-top: -66.75px;
+  margin-left: 18px;
+  position: absolute;
+  border: 5px solid #fff;
+}
+.head__phan_than__child {
+  padding: 12px 16px 0 16px;
+  margin-bottom: 16px;
+}
+
+.phan_than_name {
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+.full_name {
+  font-weight: 700;
+  font-size: 20px;
+  color: rgb(15, 20, 25);
+}
+.nick_name {
+  color: rgb(83, 100, 113);
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* phần bài đăng */
+
+.Trend_child {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.Trend_child:hover {
+  background-color: rgb(223, 223, 223);
+}
+.anh_avata {
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.nick_name {
+  font-weight: 700;
+}
+.nick_name:hover {
+  text-decoration: underline;
+}
+.noi_tat {
+  margin-left: 5px;
+}
+.title_happening_child {
+  font-size: 15px;
+  font-weight: 400;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: -4px;
+}
+.img__container {
+  width: 382px;
+  height: 510px;
+  border-top-right-radius: 8%;
+  border-top-left-radius: 8%;
+  border-bottom-left-radius: 8%;
+  border-bottom-right-radius: 8%;
+}
+.icomment:hover,
+.ishare:hover {
+  border: 1px;
+  border-radius: 45px;
+  background-color: rgb(148, 207, 255);
+  color: rgb(0, 89, 255);
+}
+.iretweet:hover {
+  border: 1px;
+  border-radius: 45px;
+  background-color: rgb(131, 255, 183);
+  color: rgb(0, 255, 98);
+}
+.ilike:hover {
+  border: 1px;
+  border-radius: 45px;
+  background-color: #ff94b8;
+  color: rgb(255, 46, 126);
+}
+/* how to follow */
+.content__whotofollow .col-11 .media div a span {
+  padding: 8px 0 0 8px;
+}
+.content__whotofollow {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+.content__whotofollow .header_whotofollow {
+  display: flex;
+  justify-content: space-between;
+}
+.bi-three-dots,
+.nut_bam {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bi-three-dots:hover {
+  border: 1px;
+  border-radius: 45px;
+  color: rgb(29, 155, 240);
+  background-color: rgba(29, 155, 240, 0.1);
+}
+.nut_bam:hover {
+  border: 1px;
+  border-radius: 45px;
+  background-color: rgb(214, 214, 214);
+}
+.content__whotofollow .user:hover {
+  background-color: rgb(185, 185, 185);
+  cursor: pointer;
+}
+.content__whotofollow .col-11 {
+  padding-right: 20px;
+  padding-left: 30px;
+}
+.btn_follow {
+  border: 1px none;
+  border-radius: 45px;
+  height: 35px;
+  padding: 0 20px 0 20px;
+  color: rgb(255, 255, 255);
+  background-color: black;
+}
+.btn_follow:hover {
+  background-color: rgb(19, 19, 19);
+}
+.content__whotofollow .col-11 div .mail {
+  color: rgb(131, 131, 131);
+}
+.content__whotofollow .col-11 div a {
+  color: black;
+  font-weight: 700;
+}
+.content__whotofollow .col-11 div a:hover {
+  text-decoration: underline;
+}
+.Trend_child {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.Trend_child:hover {
+  background-color: rgb(223, 223, 223);
+}
+.TTFollow {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(83, 100, 113);
+}
+.TTFollow > h2 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  font-size: 20px;
+  font-weight: 800;
+  color: rgb(15, 20, 25);
+}
+/* <!--Right slidebar--> */
+/*  */
+.Right_Show_more {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.Right_Show_more:hover {
+  background-color: rgb(223, 223, 223);
+}
+/*  */
+
+.right__child > h2 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.anh_avata {
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.right_slide_bar {
+  margin-top: 14px;
+  margin-left: 35px;
+  width: 350px;
+  height: 100%;
+}
+.right_slide_bar__child {
+  border-top-right-radius: 8%;
+  border-top-left-radius: 8%;
+  /* border-bottom-left-radius: 8%;
+        border-bottom-right-radius: 8%; */
+  position: fixed;
+  width: 350px;
+  height: 285px;
+  background-color: #f6f6f6;
+}
+.right_slide_bar-container {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.Content_right__child1 {
+  color: rgb(15, 20, 25);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.Content_right__child2 {
+  color: rgb(83, 100, 113);
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.btn-dark {
+  border-top-right-radius: 30%;
+  border-top-left-radius: 30%;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+}
+
+.Right_Show_more {
+  position: fixed;
+  margin-top: 285px;
+  border-bottom-left-radius: 8%;
+  border-bottom-right-radius: 8%;
+  background-color: #f6f6f6;
+  width: 350px;
+}
+
+.right_slide_bar-container:hover {
+  background-color: rgb(223, 223, 223);
+}
+
+.right_slide_bar__dow {
+  position: fixed;
+  margin-top: 360px;
+  width: 350px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.right_slide_bar__dow > a > span {
+  padding-right: 12px;
+  color: rgb(83, 100, 113);
+  font-size: 13px;
+}
+
+/* Phần chỉnh sửa riêng của Lists */
+.Pinned_Lists {
+  padding: 32px;
+  color: rgb(83, 100, 113);
+  font-weight: 400;
+  font-size: 15px;
+}
+.anh_list {
+  margin-right: 16px;
+}
+.anh_icon {
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  height: 16px;
+  width: 16px;
+}
+.List_avata {
+  border-top-right-radius: 20%;
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+}
