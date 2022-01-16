@@ -19,47 +19,56 @@ let user2 = undefined
 let user = JSON.parse(localStorage.getItem('user'))
 let list_user = JSON.parse(localStorage.getItem('listUser'))
 let list_mes = JSON.parse(localStorage.getItem('mess'))
+let img_avatar = document.querySelectorAll(".avatar")
+for(let i=0;i<img_avatar.length;i++){
+    img_avatar[i].src = user.img
+}
+$('.user_name').first().text(user.fullname)
+$('.email_name').first().text(user.username)
+if (list_mes == undefined)
+    list_mes = []
 let text = ''
 let k = 1
 let h = 1
 let first_user_mes1 = undefined
 let list_user_mes = []
-function mes1(){
-for (let i = 0; i < list_mes.length; i++) {
-    console.log(list_mes[i].mess[list_mes[i].mess.length - 1])
-    // console.log(list_mes[i][2])
-    // console.log(list_mes[i][1])
-    let check = false
-    if (user.username == list_mes[i][1]) {
-        user2 = list_mes[i][0]
-        list_user_mes.push(user2)
-        check = true
-        if (k == 1) {
-            first_user_mes1 = list_mes[i][0]
-            k = 2
-            h = 1
+function mes1() {
+    text = ''
+    for (let i = 0; i < list_mes.length; i++) {
+        //console.log(list_mes[i].mess[list_mes[i].mess.length - 1])
+        // console.log(list_mes[i][2])
+        // console.log(list_mes[i][1])
+        let check = false
+        if (user.username == list_mes[i][1]) {
+            user2 = list_mes[i][0]
+            list_user_mes.push(user2)
+            check = true
+            if (k == 1) {
+                first_user_mes1 = list_mes[i][0]
+                k = 2
+                h = 1
+            }
         }
-    }
-    if (user.username == list_mes[i][0]) {
-        user2 = list_mes[i][1]
-        list_user_mes.push(user2)
-        check = true
-        if (k == 1) {
-            first_user_mes1 = list_mes[i][1]
-            k = 2
-            h = 0
+        if (user.username == list_mes[i][0]) {
+            user2 = list_mes[i][1]
+            list_user_mes.push(user2)
+            check = true
+            if (k == 1) {
+                first_user_mes1 = list_mes[i][1]
+                k = 2
+                h = 0
+            }
         }
-    }
-    if (check == true) {
-        for (let j = 0; j < list_user.length; j++) {
-            if (list_user[j].username == user2) {
-                let l = undefined
-                if(list_mes[i].mess.length==0){
-                    l = ''
-                }
-                else
-                    l = list_mes[i].mess[list_mes[i].mess.length - 1].text
-                text = text + `<div class="user user4 ps-3 mp-3">
+        if (check == true) {
+            for (let j = 0; j < list_user.length; j++) {
+                if (list_user[j].username == user2) {
+                    let l = undefined
+                    if (list_mes[i].mess.length == 0) {
+                        l = ''
+                    }
+                    else
+                        l = list_mes[i].mess[list_mes[i].mess.length - 1].text
+                    text = text + `<div class="user user4 ps-3 mp-3">
                     <p class = 'username1' style="display:none">${user2}</p>
                 <img src="${list_user[j].img}" alt="">
                 <div>
@@ -67,34 +76,39 @@ for (let i = 0; i < list_mes.length; i++) {
                     <p>${l}</p>
                 </div>
             </div>`
-                break
+                    break
+                }
             }
         }
     }
-
-}
-$('.list_mes__user').html(text)
+    console.log(text)
+    $('.list_mes__user').html(text)
+    $('.user4').click(function () {
+        console.log('ok')
+        let username1 = this.querySelector('.username1').textContent
+        let m = undefined
+        for (let i = 0; i < list_mes.length; i++) {
+            if (list_mes[i][0] == username1 && list_mes[i][1] == user.username) {
+                m = 1
+                break
+            }
+            if (list_mes[i][1] == username1 && list_mes[i][0] == user.username) {
+                m = 0
+                break
+            }
+        }
+        Show_mes(m, username1)
+    })
 }
 mes1()
-$('.user4').click(function(){
-    console.log('ok')
-    let username1 = this.querySelector('.username1').textContent
-    let m = undefined
-    for(let i=0;i<list_mes.length;i++){
-        if(list_mes[i][0]==username1 && list_mes[i][1]==user.username){
-            m = 1
-            break
-        }
-        if(list_mes[i][1]==username1 && list_mes[i][0]==user.username){
-            m = 0
-            break
-        }
+Show_mes(h, first_user_mes1)
+function Show_mes(x, first_user_mes) {
+    console.log(first_user_mes)
+    if(first_user_mes == undefined){
+        $('.mes header div p').text('')
+        $('.mes header div h4').text('')
     }
-    Show_mes(m,username1)
-})
-Show_mes(h,first_user_mes1)
-function Show_mes(x,first_user_mes) {
-    console.log(user2)
+    else{
     for (let i = 0; i < list_mes.length; i++) {
         if (list_mes[i][x] == user.username && list_mes[i][1 - x] == first_user_mes) {
             k = i
@@ -128,7 +142,7 @@ function Show_mes(x,first_user_mes) {
             $('.mes__box_chat').html(text)
 
         }
-    }
+    }}
 }
 
 `<div class="mes__box_chat__text you">
@@ -149,15 +163,15 @@ $('.addmess').click(function () {
     text = ``
     console.log(list_user)
     console.log(list_user_mes)
-    for(let i=0;i<list_user.length;i++){
+    for (let i = 0; i < list_user.length; i++) {
         check = false
-        for(let j=0;j<list_user_mes.length;j++){
-            if(list_user_mes[j]==list_user[i].username){
+        for (let j = 0; j < list_user_mes.length; j++) {
+            if (list_user_mes[j] == list_user[i].username) {
                 check = true
                 break
             }
         }
-        if(check==false){
+        if (check == false) {
             text = text + `<div class="user user1 user2 ps-3 mp-3">
         <p class="username2" style="display: none;">${list_user[i].username}</p>
         <img src="${list_user[i].img}" alt="">
@@ -179,19 +193,23 @@ $('.addmess').click(function () {
     //     </div>
     //     </div>`
     //     }
-        
+
     // }
     $('.add_user__add').html(text)
     $('.add_user__add').show()
-    $('.user2').click(function(){
-        let user3= this.querySelector('.username2').textContent
+    $('.user2').click(function () {
+        let user3 = this.querySelector('.username2').textContent
         let mess = {
-            0:user3,
-            1:user.username,
-            mess:[]
+            0: user3,
+            1: user.username,
+            mess: []
         }
         list_mes.push(mess)
-        localStorage.setItem('mess',JSON.stringify(list_mes))
+        localStorage.setItem('mess', JSON.stringify(list_mes))
+        $('.add_user__add').hide()
+        $('.add_user').hide()
+        console.log(list_mes)
+        mes1()
     })
 })
 
@@ -206,11 +224,12 @@ $('.send').click(function () {
 </div>`
         $('.mes__box_chat').html(text1)
         let mess = {
-            user:h,
-            text:text.trim()
+            user: h,
+            text: text.trim()
         }
         list_mes[k].mess.push(mess)
         console.log(list_mes)
-        localStorage.setItem('mess',JSON.stringify(list_mes))
+        localStorage.setItem('mess', JSON.stringify(list_mes))
+        $('.Nhap_tin_nhan').val('')
     }
 })
