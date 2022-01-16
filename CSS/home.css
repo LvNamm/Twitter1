@@ -232,3 +232,7 @@ body .content__whotofollow .col-11 div a:hover {
 .right_slide_bar__search div input:focus {
   outline: none;
 }
+#test{
+  width: 200px;
+  height: auto;
+}

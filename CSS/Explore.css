@@ -151,6 +151,8 @@ body .content {
   height: 85px;
 }
 .anh_avata {
+  width: 40px;
+  height: 40px;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
@@ -159,7 +161,7 @@ body .content {
 
 .img__container {
   width: 382px;
-  height: 510px;
+  height: auto;
   border-top-right-radius: 8%;
   border-top-left-radius: 8%;
   border-bottom-left-radius: 8%;
@@ -293,17 +295,18 @@ body .content {
   background-color: #ff94b8;
   color: rgb(255, 46, 126);
 }
-.bi-three-dots {
+.fa-trash {
   width: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.bi-three-dots:hover {
+.fa-trash:hover {
   border: 1px;
   border-radius: 45px;
   background-color: rgb(219, 255, 252);
+  cursor: pointer;
 }
 .gach_chan--hover:hover {
   text-decoration: underline;
@@ -316,4 +319,11 @@ body .content {
   padding-bottom: 12px;
   font-size: 20px;
   font-weight: 800;
+}
+
+.liked{
+  color: rgb(255, 0, 0);
+  background-color: rgb(255, 144, 124);
+  border: 1px;
+  border-radius: 45px;
 }
