@@ -84,4 +84,6 @@ a {
   body .left-slide-bar__profile__div .email_name {
     color: #949191;
   }
-  
+  .user_name{
+    white-space: nowrap;
+  }
