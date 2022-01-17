@@ -122,7 +122,7 @@ function show(){
                     <p class="opition_tweet comment"> ${list_tweet[i].comment.length}</p>
                 </div>
                 <div class="col icontweet"><i class="iconn  iretweet bi bi-arrow-repeat"></i>
-                    <p class="opition_tweet retweet"> 2.9k </p>
+                    <p class="opition_tweet retweet"> 0 </p>
                 </div>
                 <div class="col icontweet"><i class="iconn ilike bi bi-heart ${classlike}"  id="${list_tweet[i].id}"></i>
                 <i class="iconn ilike bi bi-heart"  id="i${list_tweet[i].id}" style="display:none">${liked}</i>
@@ -154,7 +154,7 @@ function show(){
     }
 }
     $('.bai_dang').html(text)
-
+    /*Người dùng Bình luận bài viết*/
     $('.btn_comment').click(function(){
         let input = this.parentElement.querySelector('input').value
         let id = this.parentElement.querySelector('p').textContent
@@ -175,6 +175,7 @@ function show(){
             localStorage.setItem('listtweet',JSON.stringify(list_tweet))
             console.log(list_tweet)
             this.parentElement.querySelector('input').value = ''
+            this.parentElement.parentElement.querySelector('.comment').textContent = list_tweet[i].comment.length
             break;
             }
         }
