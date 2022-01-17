@@ -3,8 +3,10 @@ p {
   padding-right: 10px;
 }
 body .content {
+  overflow-y: auto;
+  overflow-x: hidden;
   width: 600px;
-  height: fit-content;
+  height: 100%;
   border: 1px solid rgb(212, 212, 212);
 }
 
@@ -191,6 +193,7 @@ body .content__whotofollow .col-11 div a:hover {
 .right_slide_bar__child {
   margin-top: 50px;
   position: relative;
+  overflow: auto;
 }
 .Trend_child {
   position: relative;

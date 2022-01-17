@@ -103,7 +103,7 @@ cursor: pointer;
 }
 .mes__box_chat{
     margin-top: 100px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .mes__box_chat__text img{
     width: 30px;
@@ -173,4 +173,8 @@ cursor: pointer;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+.list_mes__user{
+    overflow-y: auto;
+    padding-bottom: 20px;
 }

@@ -52,7 +52,7 @@ body .content {
   width: 133.5px;
   margin-top: -66.75px;
   margin-left: 18px;
-  position: absolute;
+  /*position: absolute;*/
   border: 5px solid #fff;
 }
 .head__phan_than__child {
@@ -62,6 +62,7 @@ body .content {
 .phan_than__edit-prf {
   padding-top: 6px;
   padding-bottom: 6px;
+  
 }
 .edit-prf {
   color: #000;
@@ -70,6 +71,7 @@ body .content {
   border: 1px solid rgb(207, 217, 222);
   border-radius: 9999px;
   font-weight: 500;
+  height: 40px;
 }
 
 .edit-prf:hover {

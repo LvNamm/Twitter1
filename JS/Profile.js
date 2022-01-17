@@ -329,6 +329,7 @@ function display_usernotfollow(string){
         <div class=""><span>Who to follow</span></div>
     </h2>
 </div>`
+let list_User = list_user
     for(let i = 0;i<list_User.length;i++){
         let check_user = false
         for(let j=0;j<user.followed.length;j++){
