@@ -1,0 +1,25 @@
+.navbar {
+  position: fixed;
+  left: 30%;
+  top: 5%;
+  transform: translate(0, -50%);
+  width: 40%;
+  background-color: azure;
+  z-index: 99999999;
+}
+
+.bi-twitter {
+  color: rgb(29, 155, 240);
+}
+.navbar_twitter {
+  margin-top: 20px;
+  font-size: 50px;
+  font-weight: 700;
+}
+.phan_than {
+  margin: 6% 10% 0 10%;
+  display: flex;
+}
+.card {
+  margin: 10px;
+}
