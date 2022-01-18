@@ -1,12 +1,13 @@
 .list_mes{
+    position: relative;
     width: 450px;
     height: 100vh;
     border-right:1px solid ;
 }
 .list_mes .header{
-    width: 450px;
+    width: 100%;
     padding: 5px 10px 0 10px;
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,16 +71,17 @@ cursor: pointer;
 }
 
 .mes{
+    position: relative;
     width: 500px;
     height: 100vh;
     border-right: 1px solid black;
 }
 .mes header{
     display: flex;
-    position: fixed;
+    position: relative;
     justify-content: space-between;
     align-items: center;
-    width: 499px;
+    width: 100%;
     padding: 10px 10px 10px 10px;
     box-sizing: border-box;
     border-bottom: 1px solid rgb(202, 202, 202);
@@ -102,7 +104,6 @@ cursor: pointer;
     border-radius: 45px;
 }
 .mes__box_chat{
-    margin-top: 100px;
     overflow-y: auto;
 }
 .mes__box_chat__text img{
@@ -147,7 +148,7 @@ cursor: pointer;
     margin: 0 10px 0 10px;
 }
 .mes__input_text input{
-    width:390px;
+    width:80%;
     border: 1px solid rgb(47, 224, 255);
     border-radius: 45px;
     height: 30px;
@@ -175,6 +176,23 @@ cursor: pointer;
     transform: translate(-50%,-50%);
 }
 .list_mes__user{
-    overflow-y: auto;
+    height: 81%;
     padding-bottom: 20px;
 }
+.list_mes__user:hover{
+    overflow-y: auto;
+}
+.list_mes__user::-webkit-scrollbar {
+    width: 5px;
+  }
+  /* Track */
+  .list_mes__user::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(255, 255, 255); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  .list_mes__user::-webkit-scrollbar-thumb {
+    background: rgb(170, 170, 170); 
+    border-radius: 10px;
+  }
