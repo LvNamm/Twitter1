@@ -24,7 +24,11 @@ if (list_tk != undefined) {
   $(".phan_than").html(text);
 }
 
-// $(".btn_xemTK").click("../HTML/admin_xemTK.html");
+$(".btn_xemTK").click(function () {
+  location.assign("../HTML/admin_xemTK.html");
+  let xem_tk = this.parentElement.querySelector(".userName").textContent;
+  localStorage.setItem("xemTK_admin", JSON.stringify(xem_tk));
+});
 $(".btn_xoaTK").click(function () {
   let us = this.parentElement.querySelector(".userName").textContent;
   //   xoa tin nhan
