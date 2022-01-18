@@ -22,10 +22,13 @@ btn.addEventListener('click',function(){
         if(username==list_user[i].username && pass==list_user[i].pass){
         check = true
         localStorage.setItem('user',JSON.stringify(list_user[i]))
-        alert('TK hoặc MK sai 2')
         location.assign('../HTML/Home.html')
     }
     }
     if(check == false)
-        alert('TK hoặc MK sai')
+        $('.wn').show()
+})
+$('input').keydown(function(){
+    console.log('ok')
+    $('.wn').hide()
 })

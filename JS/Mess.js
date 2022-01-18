@@ -34,7 +34,7 @@ let first_user_mes1 = undefined
 let list_user_mes = []
 function mes1() {
     text = ''
-    for (let i = 0; i < list_mes.length; i++) {
+    for (let i = list_mes.length-1; i >=0; i--) {
         //console.log(list_mes[i].mess[list_mes[i].mess.length - 1])
         // console.log(list_mes[i][2])
         // console.log(list_mes[i][1])
@@ -81,7 +81,6 @@ function mes1() {
             }
         }
     }
-    console.log(text)
     $('.list_mes__user').html(text)
     $('.user4').click(function () {
         console.log('ok')
@@ -122,7 +121,7 @@ function Show_mes(x, first_user_mes) {
             }
             text = ``
             for (let j = 0; j < list_mes[i].mess.length; j++) {
-                if (list_mes[i].mess[j].user == 1 - h) {
+                if (list_mes[i].mess[j].user == 1 - x) {
                     text = text + `<div class="mes__box_chat__text you">
 
                     <img src="${user2.img}" alt="">
