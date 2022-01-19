@@ -19,6 +19,7 @@ body .content__header {
   top: 0;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
 }
 
 body .content__header h3 {
@@ -213,7 +214,7 @@ body .content__whotofollow .col-11 div a:hover {
   justify-content: center;
   background-color: rgb(255, 255, 255);
 }
-.search_user{
+.search_user {
   display: flex;
   width: 350px;
   border: 1px;
@@ -236,17 +237,23 @@ body .content__whotofollow .col-11 div a:hover {
 .right_slide_bar__search div input:focus {
   outline: none;
 }
-test{
+test {
   width: 200px;
   height: auto;
 }
 
-#search_user{
-  margin-top:10px;
+#search_user {
+  margin-top: 10px;
   width: 250px;
   height: 35px;
 }
-#search_user input{
+#search_user input {
   width: 150px;
   height: 30px;
+}
+
+@media only screen and (max-width: 999px) {
+  .right_slide_bar {
+    display: none;
+  }
 }

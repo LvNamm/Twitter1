@@ -130,7 +130,7 @@ function show() {
                     }</p>
                 </div>
                 <div class="col icontweet"><i class="iconn  iretweet bi bi-arrow-repeat"></i>
-                    <p class="opition_tweet retweet"> 2.9k </p>
+                    <p class="opition_tweet retweet"></p>
                 </div>
                 <div class="col icontweet"><i class="iconn ilike bi bi-heart ${classlike}"  id="${
           list_tweet[i].id

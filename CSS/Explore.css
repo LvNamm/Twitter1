@@ -1,13 +1,15 @@
 body .content {
+  /* overflow-y: auto; */
   width: 600px;
-  height: 260px;
+  height: 100%;
 }
 .content__navbar {
   border: 1px solid #e9e6e9;
   width: 600px;
   height: 54px;
   display: flex;
-  position: fixed;
+  position: sticky;
+  top: 0;
   background-color: rgba(255, 255, 255, 0.85);
 }
 .chil-search {
@@ -23,7 +25,6 @@ body .content {
 }
 
 .head_Noi_dung {
-  margin-top: 55px;
   width: 100%;
   height: 340px;
 }
@@ -321,9 +322,27 @@ body .content {
   font-weight: 800;
 }
 
-.liked{
+.liked {
   color: rgb(255, 0, 0);
   background-color: rgb(255, 144, 124);
   border: 1px;
   border-radius: 45px;
+}
+
+.content:hover {
+  overflow-y: auto;
+}
+.content::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+.content::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+/* Handle */
+.content::-webkit-scrollbar-thumb {
+  background: rgb(170, 170, 170);
+  border-radius: 10px;
 }

@@ -28,15 +28,12 @@ body .content {
   width: 600px;
   height: 54px;
   display: flex;
-  position: fixed;
+  position: sticky;
+  top: 0;
   background-color: rgba(255, 255, 255, 0.85);
   z-index: 99999;
 }
 /* phần thân */
-
-.phan_than {
-  margin-top: 55px;
-}
 
 .phan_than__avata {
   border-top-right-radius: 50%;
@@ -105,8 +102,8 @@ body .content {
   margin-top: -4px;
 }
 .img__container {
-  width: 382px;
-  height: 510px;
+  width: 80% !important;
+  height: auto;
   border-top-right-radius: 8%;
   border-top-left-radius: 8%;
   border-bottom-left-radius: 8%;
@@ -313,4 +310,10 @@ body .content {
   padding-right: 12px;
   color: rgb(83, 100, 113);
   font-size: 13px;
+}
+
+@media only screen and (max-width: 999px) {
+  .right_slide_bar {
+    display: none;
+  }
 }
