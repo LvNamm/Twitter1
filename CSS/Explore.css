@@ -328,11 +328,11 @@ body .content {
   border: 1px;
   border-radius: 45px;
 }
-.content{
+.content {
   overflow-x: hidden;
   overflow-y: hidden;
 }
-.content:hover{
+.content:hover {
   overflow-y: auto;
 }
 .content::-webkit-scrollbar {

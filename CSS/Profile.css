@@ -415,3 +415,11 @@ h5 {
     display: none;
   }
 }
+.content {
+  height: 100% !important;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.content:hover {
+  overflow-y: auto;
+}

@@ -60,7 +60,7 @@ function show() {
     for (let j = 0; j < user.followed.length; j++) {
       if (list_tweet[i].user.username == user.followed[j]) {
         check_user = true;
-        console.log("ok");
+        // console.log("ok");
         break;
       }
     }
@@ -172,7 +172,7 @@ function show() {
     }
   }
   $(".bai_dang").html(text);
-
+  // bấm nút bình luận
   $(".btn_comment").click(function () {
     let input = this.parentElement.querySelector("input").value;
     let id = this.parentElement.querySelector("p").textContent;
@@ -191,11 +191,22 @@ function show() {
                 <p style="margin-top:10px;">${input}</p>
             </li>`);
         localStorage.setItem("listtweet", JSON.stringify(list_tweet));
-        console.log(list_tweet);
+        // console.log(list_tweet);
         this.parentElement.querySelector("input").value = "";
+
+        let list_btn_comment = document.querySelectorAll(".btn_comment");
+        let list_bl = document.querySelectorAll(".comment");
+        for (let j = 0; j < list_btn_comment.length; j++) {
+          if (list_btn_comment[j] == this) {
+            list_bl[j].textContent = list_tweet[i].comment.length;
+          }
+        }
         break;
       }
     }
+    console.log(
+      this.parentElement.parentElement.querySelector(".comment").textContent
+    );
   });
 
   /* Sự kiện khi bấm like*/
