@@ -89,6 +89,14 @@ a {
     white-space: nowrap;
   }
   @media only screen and (max-width: 1120px){
+    .left-slide-bar__link--pd5{
+      width: 50px !important;
+      padding: 0 !important;
+      display: flex !important;
+    }
+    .left-slide-bar__link--pd5 svg{
+      position: absolute !important;
+    }
     .test {
       width: 100px;
   }
