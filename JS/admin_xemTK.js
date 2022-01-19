@@ -28,6 +28,7 @@ for (let i = 0; i < list_User.length; i++) {
 $(".so_the_a:eq(1)").text(dem);
 
 $(".bio").text(xem_tk.bio);
+$(".phan_than__avata").attr("src", xem_tk.img);
 
 dem = 0;
 for (let i = 1; i < list_tweet.length; i++) {

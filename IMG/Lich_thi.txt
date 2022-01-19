@@ -1,9 +1,0 @@
-Nguyên lý lập trình hướng đối tượng 18/01/2022	
-
-Nền tảng phát triển Web		    19/01/2022	326-A4		tiết 13-15
-
-Lập trình Java			    20/01/2022	430-A4		tiết 13-14
-
-Xác suất thống kê		    21/01/2022	226-A4		tiết 13-14
-
-Triết học Mác - Lênin		    21/01/2022 
